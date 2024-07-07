@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+float c_f(float c){
+    int f=(9*c/5)+32;
+    return f;
+
+}
+float f_c(float f){
+    float c=(5*(f-32))/9;
+    return c;
+}
+float f_k(float f){
+    float k=(5*(f-32)/9)+273.15;
+    return k;
+}
+float k_f(float k){
+    float f=(9*(k-273.15)/5)+32;
+    return f;
+}
+float k_c(float k){
+    float c=k-273.15;
+    return c;
+}
+float c_k(float c){
+    float k=c+273.15;
+    return k;
+}
+int main(){
+    int n;
+     float x;
+    cout<<"choose the temprature conversion you want to do \n1.celcius to farenheit\n2.farenheit to celcius\n3.farenheit to kelvin\n4.kelvin to ferenheit\n5.kelvin to celcius\n6.celcius to kelvin\n\nenter their respective serial numbers:- ";
+    cin>>n;
+    cout<<endl;
+    cout<<"enter the number you want to convert:-";
+    cin>>x;
+    cout<<endl;
+
+     switch(n){
+        case 1:
+        cout<<"conversion form celcius to farenheit\nthe value of given number in farenheit is:-"<<c_f(x);
+        break;
+        case 2:
+        cout<<"conversion form farenheit to celcius\n the value of given number in celcius is:-"<<f_c(x);
+        break;
+        case 3:
+        cout<<"conversion form farenheit to kelvin\n\nthe value of given number in kelvin is:-"<<f_k(x)<<endl;
+        break;
+        case 4:
+        cout<<"conversion form kelvin to farenheit\n\nthe value of given number in farenheit is:-"<<c_f(x)<<endl;  
+        break;
+        case 5:
+        cout<<"conversion form kelvin to celcius\n\nthe value of given number in celcius is:-"<<k_c(x)<<endl;     
+        break;
+        case 6:
+        cout<<"conversion form celcius to kelvin\n\nthe value of given number in kelvin is:-"<<c_k(x)<<endl;
+        break;
+        default:
+        cout<<"invalid input";
+        break;
+
+     }
+}
